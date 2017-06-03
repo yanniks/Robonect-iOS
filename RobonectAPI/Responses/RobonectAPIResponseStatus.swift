@@ -20,9 +20,17 @@ public extension RobonectAPIResponse {
             timer = Timer(serverResponse["timer"] as? [ String : Any ])
             wlan = WLAN(serverResponse["wlan"] as? [ String : Any ])
         }
+        /**
+         Modules response wether it handled the request successfully.
+         - returns: Response as bool
+         */
         public var successful: Bool {
             return serverResponse["successful"] as? Bool ?? false
         }
+        /**
+         The mowers name as specified in Robonect.
+         - returns: Currently set name in Robonect as String.
+         */
         public var name: String? {
             return serverResponse["name"] as? String
         }
@@ -32,18 +40,38 @@ public extension RobonectAPIResponse {
             init(_ serverResponseStatus : [ String : Any ]?) {
                 self.serverResponseStatus = serverResponseStatus ?? [ String : Any ]()
             }
+            /**
+             The mowers current status.
+             - returns: Status and status code as value of the enumeration.
+             */
             public var status : RobonectAPI.StatusCode {
                 return RobonectAPI.StatusCode(rawValue: serverResponseStatus["status"] as? Int ?? 0) ?? .unknown
             }
+            /**
+             The duration the mower is in the current state.
+             - returns: Duration in seconds
+             */
             public var duration : Int {
                 return serverResponseStatus["duration"] as? Int ?? 0
             }
+            /**
+             The current mode the mower is in
+             - returns: Mode and mode code as value of the enumeration.
+             */
             public var mode : RobonectAPI.ModeCode {
                 return RobonectAPI.ModeCode(rawValue: serverResponseStatus["mode"] as? Int ?? -1) ?? .unknown
             }
+            /**
+             The current battery level
+             - returns: Battery level in percent
+             */
             public var battery : Int {
                 return serverResponseStatus["battery"] as? Int ?? 0
             }
+            /**
+             Total duration the mower was mowing
+             - returns: Duration in hours
+             */
             public var hours : Int {
                 return serverResponseStatus["hours"] as? Int ?? 0
             }
@@ -53,9 +81,17 @@ public extension RobonectAPIResponse {
             init(_ serverResponseTimer : [ String : Any ]?) {
                 self.serverResponseTimer = serverResponseTimer ?? [ String : Any ]()
             }
+            /**
+             The timers current state.
+             - returns: Status and status code as value of the enumeration.
+             */
             public var status : RobonectAPI.TimerStatusCode {
                 return RobonectAPI.TimerStatusCode(rawValue: serverResponseTimer["status"] as? Int ?? -1) ?? .unknown
             }
+            /**
+             Next scheduled mowing date
+             - returns: Date object based on the Unix timestamp
+             */
             public var next : Date? {
                 guard let dictionaryNext = serverResponseTimer["next"] as? [ String : Any ], let unixTimestamp = dictionaryNext["unix"] as? Int else {
                     return nil
@@ -68,6 +104,10 @@ public extension RobonectAPIResponse {
             init(_ serverResponseWlan : [ String : Any ]?) {
                 self.serverResponseWlan = serverResponseWlan ?? [ String : Any ]()
             }
+            /**
+             Signal strength of the network connection
+             - returns: Strength in dB
+             */
             public var signal : Int {
                 return serverResponseWlan["signal"] as? Int ?? 0
             }

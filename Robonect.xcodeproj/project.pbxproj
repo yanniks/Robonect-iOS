@@ -19,7 +19,24 @@
 		3E548D471EE2B908005132C6 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D461EE2B908005132C6 /* StatusCode.swift */; };
 		3E548D491EE2F260005132C6 /* ModeCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D481EE2F260005132C6 /* ModeCode.swift */; };
 		3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D4A1EE2F3C1005132C6 /* TimerStatusCode.swift */; };
+		3E548D501EE34141005132C6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E548D4F1EE34141005132C6 /* Alamofire.framework */; };
+		3E548D521EE341E2005132C6 /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D511EE341E2005132C6 /* NetworkingRequest.swift */; };
+		3E548D541EE34358005132C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D531EE34358005132C6 /* Result.swift */; };
+		3E548D561EE35976005132C6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E548D4F1EE34141005132C6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E548D551EE35965005132C6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3E548D561EE35976005132C6 /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3E548D261EE21D53005132C6 /* Robonect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robonect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +53,9 @@
 		3E548D461EE2B908005132C6 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusCode.swift; path = RobonectAPI/Enumerations/StatusCode.swift; sourceTree = SOURCE_ROOT; };
 		3E548D481EE2F260005132C6 /* ModeCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModeCode.swift; path = RobonectAPI/Enumerations/ModeCode.swift; sourceTree = SOURCE_ROOT; };
 		3E548D4A1EE2F3C1005132C6 /* TimerStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerStatusCode.swift; path = RobonectAPI/Enumerations/TimerStatusCode.swift; sourceTree = SOURCE_ROOT; };
+		3E548D4F1EE34141005132C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		3E548D511EE341E2005132C6 /* NetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequest.swift; path = RobonectAPI/Networking/NetworkingRequest.swift; sourceTree = SOURCE_ROOT; };
+		3E548D531EE34358005132C6 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = RobonectAPI/Networking/Result.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E548D501EE34141005132C6 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +73,7 @@
 		3E548D1D1EE21D53005132C6 = {
 			isa = PBXGroup;
 			children = (
+				3E548D4E1EE34134005132C6 /* Carthages */,
 				3E548D281EE21D53005132C6 /* Robonect */,
 				3E548D271EE21D53005132C6 /* Products */,
 			);
@@ -113,8 +135,18 @@
 		3E548D4C1EE2FC21005132C6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3E548D511EE341E2005132C6 /* NetworkingRequest.swift */,
+				3E548D531EE34358005132C6 /* Result.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		3E548D4E1EE34134005132C6 /* Carthages */ = {
+			isa = PBXGroup;
+			children = (
+				3E548D4F1EE34141005132C6 /* Alamofire.framework */,
+			);
+			name = Carthages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +159,7 @@
 				3E548D221EE21D53005132C6 /* Sources */,
 				3E548D231EE21D53005132C6 /* Frameworks */,
 				3E548D241EE21D53005132C6 /* Resources */,
+				3E548D551EE35965005132C6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -197,8 +230,10 @@
 				3E548D2A1EE21D53005132C6 /* AppDelegate.swift in Sources */,
 				3E548D3F1EE2200E005132C6 /* RobonectAPI.swift in Sources */,
 				3E548D441EE220F8005132C6 /* RobonectAPIResponseStatus.swift in Sources */,
+				3E548D521EE341E2005132C6 /* NetworkingRequest.swift in Sources */,
 				3E548D411EE220C2005132C6 /* RobonectAPIResponse.swift in Sources */,
 				3E548D2C1EE21D53005132C6 /* FirstViewController.swift in Sources */,
+				3E548D541EE34358005132C6 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +359,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RZ6J6Q7T5S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Robonect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.yanniks.Robonect;
@@ -337,6 +376,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RZ6J6Q7T5S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Robonect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.yanniks.Robonect;
@@ -364,6 +407,7 @@
 				3E548D3C1EE21D53005132C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
