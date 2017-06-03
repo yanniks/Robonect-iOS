@@ -13,6 +13,12 @@
 		3E548D311EE21D53005132C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E548D2F1EE21D53005132C6 /* Main.storyboard */; };
 		3E548D331EE21D53005132C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E548D321EE21D53005132C6 /* Assets.xcassets */; };
 		3E548D361EE21D53005132C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E548D341EE21D53005132C6 /* LaunchScreen.storyboard */; };
+		3E548D3F1EE2200E005132C6 /* RobonectAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D3E1EE2200E005132C6 /* RobonectAPI.swift */; };
+		3E548D411EE220C2005132C6 /* RobonectAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D401EE220C2005132C6 /* RobonectAPIResponse.swift */; };
+		3E548D441EE220F8005132C6 /* RobonectAPIResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D431EE220F8005132C6 /* RobonectAPIResponseStatus.swift */; };
+		3E548D471EE2B908005132C6 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D461EE2B908005132C6 /* StatusCode.swift */; };
+		3E548D491EE2F260005132C6 /* ModeCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D481EE2F260005132C6 /* ModeCode.swift */; };
+		3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D4A1EE2F3C1005132C6 /* TimerStatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		3E548D321EE21D53005132C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E548D351EE21D53005132C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E548D371EE21D53005132C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E548D3E1EE2200E005132C6 /* RobonectAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPI.swift; path = RobonectAPI/RobonectAPI.swift; sourceTree = SOURCE_ROOT; };
+		3E548D401EE220C2005132C6 /* RobonectAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponse.swift; path = RobonectAPI/RobonectAPIResponse.swift; sourceTree = SOURCE_ROOT; };
+		3E548D431EE220F8005132C6 /* RobonectAPIResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseStatus.swift; path = RobonectAPI/Responses/RobonectAPIResponseStatus.swift; sourceTree = SOURCE_ROOT; };
+		3E548D461EE2B908005132C6 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusCode.swift; path = RobonectAPI/Enumerations/StatusCode.swift; sourceTree = SOURCE_ROOT; };
+		3E548D481EE2F260005132C6 /* ModeCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModeCode.swift; path = RobonectAPI/Enumerations/ModeCode.swift; sourceTree = SOURCE_ROOT; };
+		3E548D4A1EE2F3C1005132C6 /* TimerStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerStatusCode.swift; path = RobonectAPI/Enumerations/TimerStatusCode.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 		3E548D281EE21D53005132C6 /* Robonect */ = {
 			isa = PBXGroup;
 			children = (
+				3E548D3D1EE21FE0005132C6 /* API */,
 				3E548D291EE21D53005132C6 /* AppDelegate.swift */,
 				3E548D2B1EE21D53005132C6 /* FirstViewController.swift */,
 				3E548D2D1EE21D53005132C6 /* SecondViewController.swift */,
@@ -65,6 +78,43 @@
 				3E548D371EE21D53005132C6 /* Info.plist */,
 			);
 			path = Robonect;
+			sourceTree = "<group>";
+		};
+		3E548D3D1EE21FE0005132C6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3E548D4C1EE2FC21005132C6 /* Networking */,
+				3E548D451EE2B89F005132C6 /* Enumerations */,
+				3E548D421EE220D2005132C6 /* Responses */,
+				3E548D3E1EE2200E005132C6 /* RobonectAPI.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		3E548D421EE220D2005132C6 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				3E548D401EE220C2005132C6 /* RobonectAPIResponse.swift */,
+				3E548D431EE220F8005132C6 /* RobonectAPIResponseStatus.swift */,
+			);
+			name = Responses;
+			sourceTree = "<group>";
+		};
+		3E548D451EE2B89F005132C6 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				3E548D461EE2B908005132C6 /* StatusCode.swift */,
+				3E548D481EE2F260005132C6 /* ModeCode.swift */,
+				3E548D4A1EE2F3C1005132C6 /* TimerStatusCode.swift */,
+			);
+			name = Enumerations;
+			sourceTree = "<group>";
+		};
+		3E548D4C1EE2FC21005132C6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */,
+				3E548D471EE2B908005132C6 /* StatusCode.swift in Sources */,
+				3E548D491EE2F260005132C6 /* ModeCode.swift in Sources */,
 				3E548D2E1EE21D53005132C6 /* SecondViewController.swift in Sources */,
 				3E548D2A1EE21D53005132C6 /* AppDelegate.swift in Sources */,
+				3E548D3F1EE2200E005132C6 /* RobonectAPI.swift in Sources */,
+				3E548D441EE220F8005132C6 /* RobonectAPIResponseStatus.swift in Sources */,
+				3E548D411EE220C2005132C6 /* RobonectAPIResponse.swift in Sources */,
 				3E548D2C1EE21D53005132C6 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
