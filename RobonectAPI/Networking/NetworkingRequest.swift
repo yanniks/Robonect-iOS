@@ -9,9 +9,10 @@
 import Alamofire
 
 public class NetworkingRequest {
-    public static func sendStatusRequest(hostname: String, callback: @escaping ((_ result: Result<RobonectAPIResponse.Status>) -> Void)) {
+    public static func sendStatusRequest(mower: Mower, callback: @escaping ((_ result: Result<RobonectAPIResponse.Status>) -> Void)) {
+        let parameters = [ "cmd" : "status" ]
         // Send a web request to the module
-        Alamofire.request(hostname + "/json?cmd=status").responseJSON { response in
+        Alamofire.request(mower.url, parameters: parameters).responseJSON { response in
             // Convert the response to a dictionary type, otherwise return the callback without result
             guard let value = response.value as? [ String : Any ] else {
                 callback(Result<RobonectAPIResponse.Status>(response.request, response: response.response, error: response.error, value: nil))

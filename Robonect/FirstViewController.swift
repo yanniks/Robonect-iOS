@@ -13,7 +13,11 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        NetworkingRequest.sendStatusRequest(hostname: "http://mowerhostname") { callback in
+        guard let mower = Mower.createMower(url: "http://mowerhostname") else {
+            print("Mower object creation failed!")
+            return
+        }
+        NetworkingRequest.sendStatusRequest(mower: mower) { callback in
             print(callback.isSuccessful)
             if let value = callback.value {
                 print(value)
