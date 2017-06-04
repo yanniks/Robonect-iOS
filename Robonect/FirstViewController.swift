@@ -17,10 +17,10 @@ class FirstViewController: UIViewController {
             print("Mower object creation failed!")
             return
         }
-        NetworkingRequest.sendStatusRequest(mower: mower) { callback in
+        NetworkingRequest.setMowerName(mower: mower) { callback in
             print(callback.isSuccessful)
             if let value = callback.value {
-                print(value)
+                print(value.name ?? "No timer")
             }
         }
     }

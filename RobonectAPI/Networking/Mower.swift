@@ -12,6 +12,7 @@ public class Mower {
     public var hostname: String
     public var ssl: Bool
     public var port: Int
+    public var name: String?
     public var username: String?
     public var password: String?
     
@@ -23,12 +24,13 @@ public class Mower {
         let customPort = ssl ? (port == 443 ? false : true) : (port == 80 ? false : true)
         return (ssl ? "https" : "http") + "://" + hostname + (customPort ? (":" + String(port)) : "") + "/json"
     }
-    public init(hostname: String, ssl: Bool = false, port: Int = 80, username: String? = nil, password: String? = nil) {
+    public init(hostname: String, ssl: Bool = false, port: Int = 80, username: String? = nil, password: String? = nil, name: String? = nil) {
         self.hostname = hostname
         self.ssl = ssl
         self.port = port
         self.username = username
         self.password = password
+        self.name = name
     }
     /**
      Create a Mower object based on a passed URL
