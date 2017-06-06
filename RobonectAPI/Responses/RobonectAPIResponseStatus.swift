@@ -14,11 +14,13 @@ public extension RobonectAPIResponse {
         public let status : Status
         public let timer : Timer
         public let wlan : WLAN
+        public let error : Error
         public init(serverResponse : [ String : Any ]) {
             self.serverResponse = serverResponse
             status = Status(serverResponse["status"] as? [ String : Any ])
             timer = Timer(serverResponse["timer"] as? [ String : Any ])
             wlan = WLAN(serverResponse["wlan"] as? [ String : Any ])
+            error = Error(serverResponse["error"] as? [ String : Any ])
         }
         /**
          Modules response wether it handled the request successfully.
@@ -110,6 +112,36 @@ public extension RobonectAPIResponse {
              */
             public var signal : Int {
                 return serverResponseWlan["signal"] as? Int ?? 0
+            }
+        }
+        public struct Error {
+            private var serverResponseError : [ String : Any ]
+            init(_ serverResponseError : [ String : Any ]?) {
+                self.serverResponseError = serverResponseError ?? [ String : Any ]()
+            }
+            /**
+             Error Code as specified by Husqvarna
+             - returns: Error code as enum value
+             */
+            public var errorCode : RobonectAPI.ErrorCode {
+                return RobonectAPI.ErrorCode(rawValue: serverResponseError["error_code"] as? Int ?? 255) ?? .unspecified
+            }
+            /**
+             Error message as supplied by Robonect
+             - Error message in German
+             */
+            public var errorMessage : String? {
+                return serverResponseError["error_message"] as? String
+            }
+            /**
+             First error date and time
+             - returns: Date object based on the Unix timestamp
+             */
+            public var date : Date? {
+                guard let unix = serverResponseError["unix"] as? Int else {
+                    return nil
+                }
+                return Date(timeIntervalSince1970: Double(unix))
             }
         }
     }
