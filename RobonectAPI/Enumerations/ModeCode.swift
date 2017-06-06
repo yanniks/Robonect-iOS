@@ -28,8 +28,8 @@ public extension RobonectAPI {
         case job = 99
         
         /**
- Value used when setting mode.
- */
+         Value used when setting mode.
+         */
         public var stringValue: String {
             switch self {
             case .auto:
@@ -47,8 +47,8 @@ public extension RobonectAPI {
             }
         }
         /**
- Value that is relevant when setting the *after* parameter when setting mode.
- */
+         Value that is relevant when setting the *after* parameter when setting mode.
+         */
         public var afterValue: Int {
             switch self {
             case .auto:
@@ -61,6 +61,29 @@ public extension RobonectAPI {
                 return 3
             default:
                 return -1
+            }
+        }
+        /**
+         Localized description of the mode
+         */
+        public var localized: String {
+            switch self {
+            case .auto:
+                return "Automatic"
+            case .demo:
+                return "Demonstration"
+            case .endOfDay:
+                return "End of day"
+            case .home:
+                return "Home"
+            case .job:
+                return "Job"
+            case .manual:
+                return "Manual"
+            case .startMowing:
+                return "Start mowing"
+            default:
+                return "Unknown"
             }
         }
     }
