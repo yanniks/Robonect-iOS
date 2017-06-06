@@ -29,11 +29,22 @@
 		3E990C191EE7183100D6EE7C /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C181EE7183100D6EE7C /* Integer.swift */; };
 		3E990C1B1EE71CE600D6EE7C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C1A1EE71CE600D6EE7C /* UIColor.swift */; };
 		3E990C1D1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */; };
+		3E990C251EE72BC300D6EE7C /* RobonectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C241EE72BC300D6EE7C /* RobonectUITests.swift */; };
 		3EE87C5A1EE404A400605321 /* Mower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C591EE404A400605321 /* Mower.swift */; };
 		3EE87C5C1EE4128D00605321 /* RobonectAPIResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */; };
 		3EE87C5E1EE41C1400605321 /* NetworkingRequestSetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */; };
 		3EF108861EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF108851EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E990C271EE72BC300D6EE7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E548D1E1EE21D53005132C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E548D251EE21D53005132C6;
+			remoteInfo = Robonect;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3E548D551EE35965005132C6 /* CopyFiles */ = {
@@ -72,6 +83,9 @@
 		3E990C181EE7183100D6EE7C /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Integer.swift; path = Extensions/Integer.swift; sourceTree = "<group>"; };
 		3E990C1A1EE71CE600D6EE7C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extensions/UIColor.swift; sourceTree = "<group>"; };
 		3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewControllerTableViewDataSource.swift; path = Views/Status/StatusViewControllerTableViewDataSource.swift; sourceTree = "<group>"; };
+		3E990C221EE72BC300D6EE7C /* RobonectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobonectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E990C241EE72BC300D6EE7C /* RobonectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobonectUITests.swift; sourceTree = "<group>"; };
+		3E990C261EE72BC300D6EE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EE87C591EE404A400605321 /* Mower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mower.swift; path = RobonectAPI/Networking/Mower.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseName.swift; path = RobonectAPI/Responses/RobonectAPIResponseName.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestSetMode.swift; path = RobonectAPI/Networking/NetworkingRequestSetMode.swift; sourceTree = SOURCE_ROOT; };
@@ -88,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E990C1F1EE72BC300D6EE7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +117,7 @@
 			children = (
 				3E548D4E1EE34134005132C6 /* Carthages */,
 				3E548D281EE21D53005132C6 /* Robonect */,
+				3E990C231EE72BC300D6EE7C /* RobonectUITests */,
 				3E548D271EE21D53005132C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				3E548D261EE21D53005132C6 /* Robonect.app */,
+				3E990C221EE72BC300D6EE7C /* RobonectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +234,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		3E990C231EE72BC300D6EE7C /* RobonectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E990C241EE72BC300D6EE7C /* RobonectUITests.swift */,
+				3E990C261EE72BC300D6EE7C /* Info.plist */,
+			);
+			path = RobonectUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,6 +264,24 @@
 			productReference = 3E548D261EE21D53005132C6 /* Robonect.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3E990C211EE72BC300D6EE7C /* RobonectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E990C291EE72BC300D6EE7C /* Build configuration list for PBXNativeTarget "RobonectUITests" */;
+			buildPhases = (
+				3E990C1E1EE72BC300D6EE7C /* Sources */,
+				3E990C1F1EE72BC300D6EE7C /* Frameworks */,
+				3E990C201EE72BC300D6EE7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E990C281EE72BC300D6EE7C /* PBXTargetDependency */,
+			);
+			name = RobonectUITests;
+			productName = RobonectUITests;
+			productReference = 3E990C221EE72BC300D6EE7C /* RobonectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,6 +296,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RZ6J6Q7T5S;
 						ProvisioningStyle = Automatic;
+					};
+					3E990C211EE72BC300D6EE7C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = RZ6J6Q7T5S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3E548D251EE21D53005132C6;
 					};
 				};
 			};
@@ -263,6 +319,7 @@
 			projectRoot = "";
 			targets = (
 				3E548D251EE21D53005132C6 /* Robonect */,
+				3E990C211EE72BC300D6EE7C /* RobonectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,6 +333,13 @@
 				3E548D331EE21D53005132C6 /* Assets.xcassets in Resources */,
 				3E990C0D1EE6FC4600D6EE7C /* Lawnmower Icons.xcassets in Resources */,
 				3E548D311EE21D53005132C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E990C201EE72BC300D6EE7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +371,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E990C1E1EE72BC300D6EE7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E990C251EE72BC300D6EE7C /* RobonectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E990C281EE72BC300D6EE7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E548D251EE21D53005132C6 /* Robonect */;
+			targetProxy = 3E990C271EE72BC300D6EE7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3E548D2F1EE21D53005132C6 /* Main.storyboard */ = {
@@ -458,6 +538,32 @@
 			};
 			name = Release;
 		};
+		3E990C2A1EE72BC300D6EE7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = RZ6J6Q7T5S;
+				INFOPLIST_FILE = RobonectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.yanniks.RobonectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Robonect;
+			};
+			name = Debug;
+		};
+		3E990C2B1EE72BC300D6EE7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = RZ6J6Q7T5S;
+				INFOPLIST_FILE = RobonectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.yanniks.RobonectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Robonect;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -478,6 +584,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3E990C291EE72BC300D6EE7C /* Build configuration list for PBXNativeTarget "RobonectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E990C2A1EE72BC300D6EE7C /* Debug */,
+				3E990C2B1EE72BC300D6EE7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
