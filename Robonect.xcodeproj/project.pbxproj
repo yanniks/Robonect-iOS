@@ -28,6 +28,7 @@
 		3E990C161EE709A700D6EE7C /* FontAwesome.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E990C0E1EE7072200D6EE7C /* FontAwesome.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E990C191EE7183100D6EE7C /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C181EE7183100D6EE7C /* Integer.swift */; };
 		3E990C1B1EE71CE600D6EE7C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C1A1EE71CE600D6EE7C /* UIColor.swift */; };
+		3E990C1D1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */; };
 		3EE87C5A1EE404A400605321 /* Mower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C591EE404A400605321 /* Mower.swift */; };
 		3EE87C5C1EE4128D00605321 /* RobonectAPIResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */; };
 		3EE87C5E1EE41C1400605321 /* NetworkingRequestSetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */; };
@@ -70,6 +71,7 @@
 		3E990C141EE708AD00D6EE7C /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewController.swift; path = Views/Status/StatusViewController.swift; sourceTree = "<group>"; };
 		3E990C181EE7183100D6EE7C /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Integer.swift; path = Extensions/Integer.swift; sourceTree = "<group>"; };
 		3E990C1A1EE71CE600D6EE7C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extensions/UIColor.swift; sourceTree = "<group>"; };
+		3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewControllerTableViewDataSource.swift; path = Views/Status/StatusViewControllerTableViewDataSource.swift; sourceTree = "<group>"; };
 		3EE87C591EE404A400605321 /* Mower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mower.swift; path = RobonectAPI/Networking/Mower.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseName.swift; path = RobonectAPI/Responses/RobonectAPIResponseName.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestSetMode.swift; path = RobonectAPI/Networking/NetworkingRequestSetMode.swift; sourceTree = SOURCE_ROOT; };
@@ -195,6 +197,7 @@
 			children = (
 				3E990C121EE7087800D6EE7C /* StatusViewCell.swift */,
 				3E990C141EE708AD00D6EE7C /* StatusViewController.swift */,
+				3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */,
 			);
 			name = Status;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE87C5A1EE404A400605321 /* Mower.swift in Sources */,
+				3E990C1D1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift in Sources */,
 				3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */,
 				3E548D471EE2B908005132C6 /* StatusCode.swift in Sources */,
 				3E548D491EE2F260005132C6 /* ModeCode.swift in Sources */,

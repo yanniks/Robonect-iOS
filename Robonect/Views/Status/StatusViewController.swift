@@ -9,7 +9,7 @@
 import UIKit
 import FontAwesome
 
-class StatusViewController: UIViewController, UITableViewDataSource {
+class StatusViewController: UIViewController {
     // Labels and ImageViews used for the header
     @IBOutlet weak var labelMowerName: UILabel!
     @IBOutlet weak var labelStatus: UILabel!
@@ -20,7 +20,11 @@ class StatusViewController: UIViewController, UITableViewDataSource {
     var response : RobonectAPIResponse.Status? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        infoTableView.refreshControl = UIRefreshControl()
+        infoTableView.refreshControl?.addTarget(self, action: #selector(StatusViewController.updateContent), for: .valueChanged)
+        updateContent()
+    }
+    func updateContent() {
         guard let mower = Mower.createMower(url: "http://mowerhostname") else {
             print("Mower object creation failed!")
             return
@@ -28,6 +32,7 @@ class StatusViewController: UIViewController, UITableViewDataSource {
         NetworkingRequest.sendStatusRequest(mower: mower) { callback in
             self.response = callback.value
             DispatchQueue.main.async {
+                self.infoTableView.refreshControl?.endRefreshing()
                 self.updateHeaderSection()
                 self.infoTableView.reloadData()
             }
@@ -39,8 +44,9 @@ class StatusViewController: UIViewController, UITableViewDataSource {
         
         // Update the mowers state
         var textStatus = "Unknown"
+        var color = UIColor.robonectStatusRed
         if let status = response?.status.status {
-            var color = UIColor.robonectStatusGreen
+            color = UIColor.robonectStatusGreen
             switch status {
             case .mow:
                 imageViewStatus.image = UIImage(named: "mower_active")
@@ -65,8 +71,10 @@ class StatusViewController: UIViewController, UITableViewDataSource {
             default:
                 break
             }
-            imageViewStatus.backgroundColor = color
+        } else {
+            imageViewStatus.image = UIImage(named: "mower_attention")
         }
+        imageViewStatus.backgroundColor = color
         labelStatus.text = "Status: " + textStatus
         
         if let battery = response?.status.battery {
@@ -74,40 +82,5 @@ class StatusViewController: UIViewController, UITableViewDataSource {
         } else {
             labelBattery.text = "Battery: Unknown"
         }
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "statuscell") as? StatusViewCell else {
-            return UITableViewCell()
-        }
-        if indexPath.row == 0 {
-            cell.imageIcon.image = UIImage.fontAwesomeIcon(name: .clockO, textColor: .white, size: CGSize(width: 40, height: 40))
-            if let duration = response?.status.duration {
-                let (h,m,_) = duration.toHoursMinutesSeconds
-                cell.textDescription.text = "\(h) hours, \(m) minutes"
-            } else {
-                cell.textDescription.text = "Unknown"
-            }
-        } else if indexPath.row == 1 {
-            cell.imageIcon.image = UIImage.fontAwesomeIcon(name: .arrowRight, textColor: .white, size: CGSize(width: 40, height: 40))
-            let df = DateFormatter()
-            df.dateStyle = .long
-            df.timeStyle = .short
-            if let next = response?.timer.next {
-                cell.textDescription.text = df.string(from: next)
-            } else {
-                cell.textDescription.text = "Unknown"
-            }
-        } else {
-            cell.imageIcon.image = UIImage.fontAwesomeIcon(name: .wifi, textColor: .white, size: CGSize(width: 35, height: 35))
-            if let wifiSignal = response?.wlan.signal {
-                cell.textDescription.text = String(wifiSignal) + " dB"
-            } else {
-                cell.textDescription.text = "Could not fetch signal strength"
-            }
-        }
-        return cell
     }
 }
