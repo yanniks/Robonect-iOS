@@ -124,7 +124,7 @@ public extension RobonectAPIResponse {
              - returns: Error code as enum value
              */
             public var errorCode : RobonectAPI.ErrorCode {
-                return RobonectAPI.ErrorCode(rawValue: serverResponseError["error_code"] as? Int ?? 255) ?? .unspecified
+                return RobonectAPI.ErrorCode(rawValue: serverResponseError["error_code"] as? Int ?? -1) ?? .unknown
             }
             /**
              Error message as supplied by Robonect
