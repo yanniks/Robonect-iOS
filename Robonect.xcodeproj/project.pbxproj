@@ -25,6 +25,8 @@
 		3E548D561EE35976005132C6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E548D4F1EE34141005132C6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3EE87C5A1EE404A400605321 /* Mower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C591EE404A400605321 /* Mower.swift */; };
 		3EE87C5C1EE4128D00605321 /* RobonectAPIResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */; };
+		3EE87C5E1EE41C1400605321 /* NetworkingRequestSetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */; };
+		3EF108861EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF108851EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +62,8 @@
 		3E548D531EE34358005132C6 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = RobonectAPI/Networking/Result.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C591EE404A400605321 /* Mower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mower.swift; path = RobonectAPI/Networking/Mower.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseName.swift; path = RobonectAPI/Responses/RobonectAPIResponseName.swift; sourceTree = SOURCE_ROOT; };
+		3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestSetMode.swift; path = RobonectAPI/Networking/NetworkingRequestSetMode.swift; sourceTree = SOURCE_ROOT; };
+		3EF108851EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseSuccess.swift; path = RobonectAPI/Responses/RobonectAPIResponseSuccess.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				3E548D401EE220C2005132C6 /* RobonectAPIResponse.swift */,
 				3E548D431EE220F8005132C6 /* RobonectAPIResponseStatus.swift */,
 				3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */,
+				3EF108851EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				3E548D511EE341E2005132C6 /* NetworkingRequest.swift */,
 				3E548D531EE34358005132C6 /* Result.swift */,
 				3EE87C591EE404A400605321 /* Mower.swift */,
+				3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -236,9 +242,11 @@
 				3E548D2E1EE21D53005132C6 /* SecondViewController.swift in Sources */,
 				3E548D2A1EE21D53005132C6 /* AppDelegate.swift in Sources */,
 				3E548D3F1EE2200E005132C6 /* RobonectAPI.swift in Sources */,
+				3EE87C5E1EE41C1400605321 /* NetworkingRequestSetMode.swift in Sources */,
 				3E548D441EE220F8005132C6 /* RobonectAPIResponseStatus.swift in Sources */,
 				3E548D521EE341E2005132C6 /* NetworkingRequest.swift in Sources */,
 				3E548D411EE220C2005132C6 /* RobonectAPIResponse.swift in Sources */,
+				3EF108861EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift in Sources */,
 				3EE87C5C1EE4128D00605321 /* RobonectAPIResponseName.swift in Sources */,
 				3E548D2C1EE21D53005132C6 /* FirstViewController.swift in Sources */,
 				3E548D541EE34358005132C6 /* Result.swift in Sources */,

@@ -28,11 +28,12 @@ public class NetworkingRequest {
             callback(Result<RobonectAPIResponse.Status>(response.request, response: response.response, error: response.error, value: status))
         }
     }
-    public static func setMowerName(mower: Mower, callback: @escaping ((_ result: Result<RobonectAPIResponse.Name>) -> Void)) {
+    /**
+     Update the mowers name in Robonect
+     */
+    public static func set(name: String, mower: Mower, callback: @escaping ((_ result: Result<RobonectAPIResponse.Name>) -> Void)) {
         var parameters = [ "cmd" : "name" ]
-        if let name = mower.name {
-            parameters["name"] = name
-        }
+        parameters["name"] = name
         // Send a web request to the module
         Alamofire.request(mower.url, parameters: parameters).responseJSON { response in
             // Convert the response to a dictionary type, otherwise return the callback without result
@@ -41,7 +42,7 @@ public class NetworkingRequest {
                 return
             }
             
-            // Instantiate the Status result with the data the module sent
+            // Instantiate the Name result with the data the module sent
             let status = RobonectAPIResponse.Name(serverResponse: value)
             // Update the mowers name based on Robonects response
             if let name = status.name {

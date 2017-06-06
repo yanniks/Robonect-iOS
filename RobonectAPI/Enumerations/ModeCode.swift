@@ -23,5 +23,45 @@ public extension RobonectAPI {
         case home = 2
         case demo = 3
         case unknown = -1
+        case startMowing = 97
+        case endOfDay = 98
+        case job = 99
+        
+        /**
+ Value used when setting mode.
+ */
+        public var stringValue: String {
+            switch self {
+            case .auto:
+                return "auto"
+            case .manual:
+                return "man"
+            case .home:
+                return "home"
+            case .endOfDay:
+                return "eod"
+            case .job:
+                return "job"
+            default:
+                return ""
+            }
+        }
+        /**
+ Value that is relevant when setting the *after* parameter when setting mode.
+ */
+        public var afterValue: Int {
+            switch self {
+            case .auto:
+                return 4
+            case .home:
+                return 1
+            case .endOfDay:
+                return 2
+            case .manual:
+                return 3
+            default:
+                return -1
+            }
+        }
     }
 }
