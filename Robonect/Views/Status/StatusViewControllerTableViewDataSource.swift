@@ -27,6 +27,7 @@ extension StatusViewController: UITableViewDataSource {
         } else if indexPath.row == 1 {
             cell.imageIcon.image = UIImage.fontAwesomeIcon(name: .arrowRight, textColor: .white, size: CGSize(width: 40, height: 40))
             let df = DateFormatter()
+            df.timeZone = TimeZone(abbreviation: "UTC")
             df.dateStyle = .long
             df.timeStyle = .short
             if let next = response?.timer.next {
