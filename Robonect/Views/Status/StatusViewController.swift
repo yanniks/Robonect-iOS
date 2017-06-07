@@ -77,6 +77,10 @@ class StatusViewController: UIViewController {
                 imageViewStatus.image = UIImage(named: "mower_charging")
                 textStatus = "Charging"
                 break
+            case .locateCharingStation:
+                imageViewStatus.image = UIImage(named: "mower_paused")
+                textStatus = "Locating charging station"
+                break
             case .park:
                 textStatus = "Parking"
                 break
