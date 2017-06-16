@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E17545E1EE8482C009EA2F4 /* ProgressBarViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E17545D1EE8482C009EA2F4 /* ProgressBarViews.storyboard */; };
+		3E1754601EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17545F1EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift */; };
+		3E1754631EE85436009EA2F4 /* EngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1754621EE85436009EA2F4 /* EngineViewController.swift */; };
+		3E1754651EE856A2009EA2F4 /* SharedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1754641EE856A2009EA2F4 /* SharedSettings.swift */; };
+		3E1754671EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1754661EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift */; };
 		3E413F751EE7506700D19E16 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E413F741EE7506700D19E16 /* ErrorCode.swift */; };
 		3E548D2A1EE21D53005132C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D291EE21D53005132C6 /* AppDelegate.swift */; };
 		3E548D311EE21D53005132C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E548D2F1EE21D53005132C6 /* Main.storyboard */; };
@@ -62,6 +67,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E17545D1EE8482C009EA2F4 /* ProgressBarViews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProgressBarViews.storyboard; path = Views/Storyboards/ProgressBarViews.storyboard; sourceTree = "<group>"; };
+		3E17545F1EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseEngine.swift; path = RobonectAPI/Responses/RobonectAPIResponseEngine.swift; sourceTree = SOURCE_ROOT; };
+		3E1754621EE85436009EA2F4 /* EngineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EngineViewController.swift; path = Views/Engines/EngineViewController.swift; sourceTree = "<group>"; };
+		3E1754641EE856A2009EA2F4 /* SharedSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSettings.swift; sourceTree = "<group>"; };
+		3E1754661EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewControllerTableViewDelegate.swift; path = Views/Status/StatusViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
 		3E413F741EE7506700D19E16 /* ErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorCode.swift; path = RobonectAPI/Enumerations/ErrorCode.swift; sourceTree = SOURCE_ROOT; };
 		3E548D261EE21D53005132C6 /* Robonect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robonect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E548D291EE21D53005132C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +124,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E17545C1EE847CF009EA2F4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3E548D2F1EE21D53005132C6 /* Main.storyboard */,
+				3E17545D1EE8482C009EA2F4 /* ProgressBarViews.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3E1754611EE853CB009EA2F4 /* Engine Details */ = {
+			isa = PBXGroup;
+			children = (
+				3E1754621EE85436009EA2F4 /* EngineViewController.swift */,
+			);
+			name = "Engine Details";
+			sourceTree = "<group>";
+		};
 		3E548D1D1EE21D53005132C6 = {
 			isa = PBXGroup;
 			children = (
@@ -141,10 +168,10 @@
 				3E990C0B1EE6FBF800D6EE7C /* Graphics */,
 				3E990C101EE7084D00D6EE7C /* Views */,
 				3E548D291EE21D53005132C6 /* AppDelegate.swift */,
-				3E548D2F1EE21D53005132C6 /* Main.storyboard */,
 				3E548D321EE21D53005132C6 /* Assets.xcassets */,
 				3E548D341EE21D53005132C6 /* LaunchScreen.storyboard */,
 				3E548D371EE21D53005132C6 /* Info.plist */,
+				3E1754641EE856A2009EA2F4 /* SharedSettings.swift */,
 			);
 			path = Robonect;
 			sourceTree = "<group>";
@@ -167,6 +194,7 @@
 				3E548D431EE220F8005132C6 /* RobonectAPIResponseStatus.swift */,
 				3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */,
 				3EF108851EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift */,
+				3E17545F1EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -213,6 +241,8 @@
 		3E990C101EE7084D00D6EE7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3E1754611EE853CB009EA2F4 /* Engine Details */,
+				3E17545C1EE847CF009EA2F4 /* Storyboards */,
 				3E990C111EE7085C00D6EE7C /* Status */,
 			);
 			name = Views;
@@ -224,6 +254,7 @@
 				3E990C121EE7087800D6EE7C /* StatusViewCell.swift */,
 				3E990C141EE708AD00D6EE7C /* StatusViewController.swift */,
 				3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */,
+				3E1754661EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift */,
 			);
 			name = Status;
 			sourceTree = "<group>";
@@ -333,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E548D361EE21D53005132C6 /* LaunchScreen.storyboard in Resources */,
+				3E17545E1EE8482C009EA2F4 /* ProgressBarViews.storyboard in Resources */,
 				3E548D331EE21D53005132C6 /* Assets.xcassets in Resources */,
 				3E990C0D1EE6FC4600D6EE7C /* Lawnmower Icons.xcassets in Resources */,
 				3E548D311EE21D53005132C6 /* Main.storyboard in Resources */,
@@ -358,6 +390,9 @@
 				3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */,
 				3E413F751EE7506700D19E16 /* ErrorCode.swift in Sources */,
 				3E548D471EE2B908005132C6 /* StatusCode.swift in Sources */,
+				3E1754651EE856A2009EA2F4 /* SharedSettings.swift in Sources */,
+				3E1754631EE85436009EA2F4 /* EngineViewController.swift in Sources */,
+				3E1754601EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift in Sources */,
 				3E548D491EE2F260005132C6 /* ModeCode.swift in Sources */,
 				3E548D2A1EE21D53005132C6 /* AppDelegate.swift in Sources */,
 				3E548D3F1EE2200E005132C6 /* RobonectAPI.swift in Sources */,
@@ -366,6 +401,7 @@
 				3EE87C5E1EE41C1400605321 /* NetworkingRequestSetMode.swift in Sources */,
 				3E548D441EE220F8005132C6 /* RobonectAPIResponseStatus.swift in Sources */,
 				3E990C151EE708AD00D6EE7C /* StatusViewController.swift in Sources */,
+				3E1754671EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift in Sources */,
 				3E548D521EE341E2005132C6 /* NetworkingRequest.swift in Sources */,
 				3E548D411EE220C2005132C6 /* RobonectAPIResponse.swift in Sources */,
 				3EF108861EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift in Sources */,

@@ -160,6 +160,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="RhE-60-My4" id="l7S-xn-Hzq"/>
+                                    <outlet property="delegate" destination="RhE-60-My4" id="MUG-c5-Hua"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status: mowing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th1-ot-npd">

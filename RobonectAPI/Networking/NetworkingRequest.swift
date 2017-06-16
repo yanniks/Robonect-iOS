@@ -24,7 +24,6 @@
 //  Robonect
 //
 //  Created by Yannik Ehlert on 03.06.17.
-//  Copyright © 2017 Yannik Ehlert. All rights reserved.
 //
 
 import Alamofire
@@ -70,6 +69,31 @@ public class NetworkingRequest {
                 mower.name = name
             }
             callback(Result<RobonectAPIResponse.Name>(response.request, response: response.response, error: response.error, value: status))
+        }
+    }
+    /**
+     Fetch the Mowers engine data
+     */
+    public static func fetchEngine(mower: Mower, callback: @escaping ((_ result: Result<RobonectAPIResponse.Engine>) -> Void)) {
+        let parameters = [ "type" : 4, "group" : 1 ]
+        // Send a web request to the module
+        Alamofire.request(mower.ajaxUrl, parameters: parameters).responseString { response in
+            guard let valueString = response.value?.replacingOccurrences(of: "%E4", with: "").removingPercentEncoding?.replacingOccurrences(of: ":'", with: "':'").replacingOccurrences(of: ",", with: ",'").replacingOccurrences(of: "{", with: "{'").replacingOccurrences(of: "\"", with: "\\\"").replacingOccurrences(of: "'", with: "\"") else {
+                callback(Result<RobonectAPIResponse.Engine>(response.request, response: response.response, error: response.error, value: nil))
+                return
+            }
+            print(valueString)
+            let json = try? JSONSerialization.jsonObject(with: valueString.data(using: .utf8) ?? Data(), options: .allowFragments)
+            // Convert the response to a dictionary type, otherwise return the callback without result
+            guard let value = json as? [ String : Any ] else {
+                callback(Result<RobonectAPIResponse.Engine>(response.request, response: response.response, error: response.error, value: nil))
+                return
+            }
+            
+            // Instantiate the Status result with the data the module sent
+            let status = RobonectAPIResponse.Engine(serverResponse: value)
+            
+            callback(Result<RobonectAPIResponse.Engine>(response.request, response: response.response, error: response.error, value: status))
         }
     }
 }

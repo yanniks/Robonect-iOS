@@ -37,13 +37,19 @@ public class Mower {
     public var username: String?
     public var password: String?
     
+    private var baseUrl: String {
+        let customPort = ssl ? (port == 443 ? false : true) : (port == 80 ? false : true)
+        return (ssl ? "https" : "http") + "://" + hostname + (customPort ? (":" + String(port)) : "")
+    }
     /**
      URL used for accessing the Robonect API
      - returns: URL String ready for use
      */
     public var url: String {
-        let customPort = ssl ? (port == 443 ? false : true) : (port == 80 ? false : true)
-        return (ssl ? "https" : "http") + "://" + hostname + (customPort ? (":" + String(port)) : "") + "/json"
+        return baseUrl + "/json"
+    }
+    public var ajaxUrl: String {
+        return baseUrl + "/ajax"
     }
     public init(hostname: String, ssl: Bool = false, port: Int = 80, username: String? = nil, password: String? = nil, name: String? = nil) {
         self.hostname = hostname

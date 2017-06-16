@@ -24,7 +24,6 @@
 //  Robonect
 //
 //  Created by Yannik Ehlert on 04.06.17.
-//  Copyright © 2017 Yannik Ehlert. All rights reserved.
 //
 
 import Foundation

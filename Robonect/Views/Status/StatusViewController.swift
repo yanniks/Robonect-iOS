@@ -46,11 +46,7 @@ class StatusViewController: UIViewController {
         updateContent()
     }
     func updateContent() {
-        guard let mower = Mower.createMower(url: "http://mowerhostname") else {
-            print("Mower object creation failed!")
-            return
-        }
-        NetworkingRequest.sendStatusRequest(mower: mower) { callback in
+        NetworkingRequest.sendStatusRequest(mower: SharedSettings.shared.mower) { callback in
             self.response = callback.value
             DispatchQueue.main.async {
                 self.infoTableView.refreshControl?.endRefreshing()
