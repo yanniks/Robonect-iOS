@@ -67,7 +67,9 @@ class EngineViewController: UIViewController {
     }
     func fetchData() {
         NetworkingRequest.fetchEngine(mower: SharedSettings.shared.mower) { callback in
-            print(callback.isSuccessful)
+            if !callback.isSuccessful {
+                ShowMessage.showMessage(message: .actionFailed)
+            }
             if let engine = callback.value {
                 self.engine = engine
                 DispatchQueue.main.async {

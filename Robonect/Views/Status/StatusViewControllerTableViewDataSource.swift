@@ -30,7 +30,7 @@
 import UIKit
 import FontAwesome_swift
 
-private enum StatusViewEnum {
+internal enum StatusViewEnum {
     case mode, duration, next, wlan, unknown, error
 }
 
@@ -52,7 +52,7 @@ extension StatusViewController: UITableViewDataSource {
     /**
      Determines which content to display in which row
      */
-    private func rowContent(indexPath: IndexPath) -> StatusViewEnum {
+    internal func rowContent(indexPath: IndexPath) -> StatusViewEnum {
         var row = indexPath.row
         if let _ = response?.error.errorMessage {
             if row == 0 {

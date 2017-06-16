@@ -34,6 +34,7 @@ public class ShowMessage {
         case mowerStarted = "Mower started"
         case mowerStopped = "Mower stopped"
         case actionFailed = "Action failed"
+        case modeAccepted = "Mode accepted"
         case custom = "CUSTOM"
         var rmessageType: RMessageType {
             switch self {
@@ -43,8 +44,10 @@ public class ShowMessage {
                 return .success
             case .actionFailed:
                 return .error
+            case .modeAccepted:
+                return .success
             default:
-                return .custom
+                return .normal
             }
         }
     }

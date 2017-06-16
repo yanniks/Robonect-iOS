@@ -30,6 +30,47 @@ import UIKit
 
 extension StatusViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let view = rowContent(indexPath: indexPath)
+        switch view {
+        case .duration:
+            durationView()
+        case .mode:
+            modeSelection()
+        case .error:
+            askErrorReset()
+        default:
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+    }
+    private func askErrorReset() {
+        let alert = UIAlertController(title: "Reset error", message: "Would you like to reset the current error?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default) { _ in
+            NetworkingRequest.resetError(mower: SharedSettings.shared.mower) { callback in
+                DispatchQueue.main.async {
+                    ShowMessage.showMessage(message: callback.isSuccessful ? .modeAccepted : .actionFailed)
+                }
+            }
+        })
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    private func modeSelection() {
+        let alert = UIAlertController(title: "Select mode", message: "Please select your preferred mode.", preferredStyle: .actionSheet)
+        let modes = [RobonectAPI.ModeCode.auto, RobonectAPI.ModeCode.manual, RobonectAPI.ModeCode.endOfDay, RobonectAPI.ModeCode.home]
+        for mode in modes {
+            alert.addAction(UIAlertAction(title: mode.localized, style: .default) { action in
+                NetworkingRequest.set(mode: mode, mower: SharedSettings.shared.mower) { callback in
+                    DispatchQueue.main.async {
+                        ShowMessage.showMessage(message: callback.isSuccessful ? .modeAccepted : .actionFailed)
+                    }
+                }
+            })
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    private func durationView() {
         let storyboard = UIStoryboard(name: "ProgressBarViews", bundle: nil)
         navigationController?.pushViewController(storyboard.instantiateViewController(withIdentifier: "engines") as! EngineViewController, animated: true)
     }
