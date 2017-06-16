@@ -82,7 +82,6 @@ public class NetworkingRequest {
                 callback(Result<RobonectAPIResponse.Engine>(response.request, response: response.response, error: response.error, value: nil))
                 return
             }
-            print(valueString)
             let json = try? JSONSerialization.jsonObject(with: valueString.data(using: .utf8) ?? Data(), options: .allowFragments)
             // Convert the response to a dictionary type, otherwise return the callback without result
             guard let value = json as? [ String : Any ] else {
