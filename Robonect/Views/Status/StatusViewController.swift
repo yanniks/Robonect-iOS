@@ -28,7 +28,7 @@
 //
 
 import UIKit
-import FontAwesome
+import FontAwesome_swift
 
 class StatusViewController: UIViewController {
     // Labels and ImageViews used for the header
@@ -43,7 +43,28 @@ class StatusViewController: UIViewController {
         super.viewDidLoad()
         infoTableView.refreshControl = UIRefreshControl()
         infoTableView.refreshControl?.addTarget(self, action: #selector(StatusViewController.updateContent), for: .valueChanged)
+        
+        let attributes = [NSFontAttributeName: UIFont.fontAwesome(ofSize: 20)] as [String: Any]
+        let startBarButton = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(StatusViewController.startMode))
+        startBarButton.setTitleTextAttributes(attributes, for: .normal)
+        startBarButton.title = String.fontAwesomeIcon(name: .play)
+        let stopBarButton = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(StatusViewController.stopMode))
+        stopBarButton.setTitleTextAttributes(attributes, for: .normal)
+        stopBarButton.title = String.fontAwesomeIcon(name: .pause)
+        let barButtons : [ UIBarButtonItem ] = [stopBarButton, startBarButton]
+        navigationItem.rightBarButtonItems = barButtons
+        
         updateContent()
+    }
+    func startMode() {
+        NetworkingRequest.startMode(mower: SharedSettings.shared.mower) { callback in
+            ShowMessage.showMessage(message: callback.isSuccessful ? .mowerStarted : .actionFailed)
+        }
+    }
+    func stopMode() {
+        NetworkingRequest.stopMode(mower: SharedSettings.shared.mower) { callback in
+            ShowMessage.showMessage(message: callback.isSuccessful ? .mowerStopped : .actionFailed)
+        }
     }
     func updateContent() {
         NetworkingRequest.sendStatusRequest(mower: SharedSettings.shared.mower) { callback in

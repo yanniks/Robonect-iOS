@@ -28,7 +28,7 @@
 //
 
 import UIKit
-import FontAwesome
+import FontAwesome_swift
 
 private enum StatusViewEnum {
     case mode, duration, next, wlan, unknown, error

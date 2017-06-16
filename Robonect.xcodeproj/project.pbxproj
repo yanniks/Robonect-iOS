@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17C0FC4A1F6B2519CA6A9221 /* Pods_Robonect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3448A7A5BB90CF8032A33E3 /* Pods_Robonect.framework */; };
 		3E17545E1EE8482C009EA2F4 /* ProgressBarViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E17545D1EE8482C009EA2F4 /* ProgressBarViews.storyboard */; };
 		3E1754601EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17545F1EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift */; };
 		3E1754631EE85436009EA2F4 /* EngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1754621EE85436009EA2F4 /* EngineViewController.swift */; };
@@ -23,15 +24,13 @@
 		3E548D471EE2B908005132C6 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D461EE2B908005132C6 /* StatusCode.swift */; };
 		3E548D491EE2F260005132C6 /* ModeCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D481EE2F260005132C6 /* ModeCode.swift */; };
 		3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D4A1EE2F3C1005132C6 /* TimerStatusCode.swift */; };
-		3E548D501EE34141005132C6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E548D4F1EE34141005132C6 /* Alamofire.framework */; };
 		3E548D521EE341E2005132C6 /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D511EE341E2005132C6 /* NetworkingRequest.swift */; };
 		3E548D541EE34358005132C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D531EE34358005132C6 /* Result.swift */; };
-		3E548D561EE35976005132C6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E548D4F1EE34141005132C6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E549B911EF416870023D513 /* NetworkingRequestStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E549B901EF416870023D513 /* NetworkingRequestStartStop.swift */; };
+		3E549B941EF426890023D513 /* ShowMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E549B931EF426890023D513 /* ShowMessage.swift */; };
 		3E990C0D1EE6FC4600D6EE7C /* Lawnmower Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E990C0C1EE6FC4600D6EE7C /* Lawnmower Icons.xcassets */; };
-		3E990C0F1EE7072200D6EE7C /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E990C0E1EE7072200D6EE7C /* FontAwesome.framework */; };
 		3E990C131EE7087800D6EE7C /* StatusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C121EE7087800D6EE7C /* StatusViewCell.swift */; };
 		3E990C151EE708AD00D6EE7C /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C141EE708AD00D6EE7C /* StatusViewController.swift */; };
-		3E990C161EE709A700D6EE7C /* FontAwesome.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E990C0E1EE7072200D6EE7C /* FontAwesome.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E990C191EE7183100D6EE7C /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C181EE7183100D6EE7C /* Integer.swift */; };
 		3E990C1B1EE71CE600D6EE7C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C1A1EE71CE600D6EE7C /* UIColor.swift */; };
 		3E990C1D1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */; };
@@ -52,21 +51,8 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3E548D551EE35965005132C6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3E548D561EE35976005132C6 /* Alamofire.framework in CopyFiles */,
-				3E990C161EE709A700D6EE7C /* FontAwesome.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		22AFEA25E99B94638B83A140 /* Pods-Robonect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robonect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Robonect/Pods-Robonect.debug.xcconfig"; sourceTree = "<group>"; };
 		3E17545D1EE8482C009EA2F4 /* ProgressBarViews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProgressBarViews.storyboard; path = Views/Storyboards/ProgressBarViews.storyboard; sourceTree = "<group>"; };
 		3E17545F1EE84C57009EA2F4 /* RobonectAPIResponseEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseEngine.swift; path = RobonectAPI/Responses/RobonectAPIResponseEngine.swift; sourceTree = SOURCE_ROOT; };
 		3E1754621EE85436009EA2F4 /* EngineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EngineViewController.swift; path = Views/Engines/EngineViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +74,9 @@
 		3E548D4F1EE34141005132C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3E548D511EE341E2005132C6 /* NetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequest.swift; path = RobonectAPI/Networking/NetworkingRequest.swift; sourceTree = SOURCE_ROOT; };
 		3E548D531EE34358005132C6 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = RobonectAPI/Networking/Result.swift; sourceTree = SOURCE_ROOT; };
+		3E549B901EF416870023D513 /* NetworkingRequestStartStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestStartStop.swift; path = RobonectAPI/Networking/NetworkingRequestStartStop.swift; sourceTree = SOURCE_ROOT; };
+		3E549B931EF426890023D513 /* ShowMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowMessage.swift; path = Views/Notifications/ShowMessage.swift; sourceTree = "<group>"; };
+		3E549B951EF426AB0023D513 /* RMessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RMessageKit.framework; path = Carthage/Build/iOS/RMessageKit.framework; sourceTree = "<group>"; };
 		3E990C0C1EE6FC4600D6EE7C /* Lawnmower Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Lawnmower Icons.xcassets"; path = "Graphics/Lawnmower Icons.xcassets"; sourceTree = "<group>"; };
 		3E990C0E1EE7072200D6EE7C /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
 		3E990C121EE7087800D6EE7C /* StatusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewCell.swift; path = Views/Status/StatusViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +91,8 @@
 		3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseName.swift; path = RobonectAPI/Responses/RobonectAPIResponseName.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestSetMode.swift; path = RobonectAPI/Networking/NetworkingRequestSetMode.swift; sourceTree = SOURCE_ROOT; };
 		3EF108851EE6CE2F0037743A /* RobonectAPIResponseSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseSuccess.swift; path = RobonectAPI/Responses/RobonectAPIResponseSuccess.swift; sourceTree = SOURCE_ROOT; };
+		4CAEAFD45D681B96E3605343 /* Pods-Robonect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robonect.release.xcconfig"; path = "Pods/Target Support Files/Pods-Robonect/Pods-Robonect.release.xcconfig"; sourceTree = "<group>"; };
+		F3448A7A5BB90CF8032A33E3 /* Pods_Robonect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robonect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E548D501EE34141005132C6 /* Alamofire.framework in Frameworks */,
-				3E990C0F1EE7072200D6EE7C /* FontAwesome.framework in Frameworks */,
+				17C0FC4A1F6B2519CA6A9221 /* Pods_Robonect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +138,8 @@
 				3E548D281EE21D53005132C6 /* Robonect */,
 				3E990C231EE72BC300D6EE7C /* RobonectUITests */,
 				3E548D271EE21D53005132C6 /* Products */,
+				9BE88A8F6898386F3837297B /* Pods */,
+				B9E61936295163104354061C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +209,7 @@
 				3E548D531EE34358005132C6 /* Result.swift */,
 				3EE87C591EE404A400605321 /* Mower.swift */,
 				3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */,
+				3E549B901EF416870023D513 /* NetworkingRequestStartStop.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -226,8 +219,17 @@
 			children = (
 				3E548D4F1EE34141005132C6 /* Alamofire.framework */,
 				3E990C0E1EE7072200D6EE7C /* FontAwesome.framework */,
+				3E549B951EF426AB0023D513 /* RMessageKit.framework */,
 			);
 			name = Carthages;
+			sourceTree = "<group>";
+		};
+		3E549B921EF426740023D513 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3E549B931EF426890023D513 /* ShowMessage.swift */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		3E990C0B1EE6FBF800D6EE7C /* Graphics */ = {
@@ -241,6 +243,7 @@
 		3E990C101EE7084D00D6EE7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3E549B921EF426740023D513 /* Notifications */,
 				3E1754611EE853CB009EA2F4 /* Engine Details */,
 				3E17545C1EE847CF009EA2F4 /* Storyboards */,
 				3E990C111EE7085C00D6EE7C /* Status */,
@@ -277,6 +280,23 @@
 			path = RobonectUITests;
 			sourceTree = "<group>";
 		};
+		9BE88A8F6898386F3837297B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22AFEA25E99B94638B83A140 /* Pods-Robonect.debug.xcconfig */,
+				4CAEAFD45D681B96E3605343 /* Pods-Robonect.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9E61936295163104354061C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3448A7A5BB90CF8032A33E3 /* Pods_Robonect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,10 +304,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E548D3A1EE21D53005132C6 /* Build configuration list for PBXNativeTarget "Robonect" */;
 			buildPhases = (
+				67D95BABB304A91FB38A86E5 /* [CP] Check Pods Manifest.lock */,
 				3E548D221EE21D53005132C6 /* Sources */,
 				3E548D231EE21D53005132C6 /* Frameworks */,
 				3E548D241EE21D53005132C6 /* Resources */,
-				3E548D551EE35965005132C6 /* CopyFiles */,
+				4166D1252CDC775909273E76 /* [CP] Embed Pods Frameworks */,
+				DE76EE9629B4D99BD00FF890 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,11 +402,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4166D1252CDC775909273E76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Robonect/Pods-Robonect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67D95BABB304A91FB38A86E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DE76EE9629B4D99BD00FF890 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Robonect/Pods-Robonect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E548D221EE21D53005132C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E549B911EF416870023D513 /* NetworkingRequestStartStop.swift in Sources */,
 				3EE87C5A1EE404A400605321 /* Mower.swift in Sources */,
 				3E990C1D1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift in Sources */,
 				3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */,
@@ -401,6 +472,7 @@
 				3EE87C5E1EE41C1400605321 /* NetworkingRequestSetMode.swift in Sources */,
 				3E548D441EE220F8005132C6 /* RobonectAPIResponseStatus.swift in Sources */,
 				3E990C151EE708AD00D6EE7C /* StatusViewController.swift in Sources */,
+				3E549B941EF426890023D513 /* ShowMessage.swift in Sources */,
 				3E1754671EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift in Sources */,
 				3E548D521EE341E2005132C6 /* NetworkingRequest.swift in Sources */,
 				3E548D411EE220C2005132C6 /* RobonectAPIResponse.swift in Sources */,
@@ -546,6 +618,7 @@
 		};
 		3E548D3B1EE21D53005132C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22AFEA25E99B94638B83A140 /* Pods-Robonect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RZ6J6Q7T5S;
@@ -563,6 +636,7 @@
 		};
 		3E548D3C1EE21D53005132C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAEAFD45D681B96E3605343 /* Pods-Robonect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RZ6J6Q7T5S;
