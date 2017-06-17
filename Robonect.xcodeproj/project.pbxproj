@@ -13,6 +13,7 @@
 		3E1754631EE85436009EA2F4 /* EngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1754621EE85436009EA2F4 /* EngineViewController.swift */; };
 		3E1754651EE856A2009EA2F4 /* SharedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1754641EE856A2009EA2F4 /* SharedSettings.swift */; };
 		3E1754671EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1754661EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift */; };
+		3E23A5C61EF506060011AFB3 /* NetworkingRequestDirectControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E23A5C51EF506060011AFB3 /* NetworkingRequestDirectControl.swift */; };
 		3E413F751EE7506700D19E16 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E413F741EE7506700D19E16 /* ErrorCode.swift */; };
 		3E548D2A1EE21D53005132C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548D291EE21D53005132C6 /* AppDelegate.swift */; };
 		3E548D311EE21D53005132C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E548D2F1EE21D53005132C6 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		3E990C1D1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C1C1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift */; };
 		3E990C251EE72BC300D6EE7C /* RobonectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E990C241EE72BC300D6EE7C /* RobonectUITests.swift */; };
 		3EDBBC431EF4675C006D68FF /* NetworkingRequestErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDBBC421EF4675C006D68FF /* NetworkingRequestErrorHandling.swift */; };
+		3EDBBC461EF46AFA006D68FF /* DirectControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDBBC451EF46AFA006D68FF /* DirectControlView.swift */; };
 		3EE87C5A1EE404A400605321 /* Mower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C591EE404A400605321 /* Mower.swift */; };
 		3EE87C5C1EE4128D00605321 /* RobonectAPIResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */; };
 		3EE87C5E1EE41C1400605321 /* NetworkingRequestSetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */; };
@@ -59,6 +61,7 @@
 		3E1754621EE85436009EA2F4 /* EngineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EngineViewController.swift; path = Views/Engines/EngineViewController.swift; sourceTree = "<group>"; };
 		3E1754641EE856A2009EA2F4 /* SharedSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSettings.swift; sourceTree = "<group>"; };
 		3E1754661EE85915009EA2F4 /* StatusViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewControllerTableViewDelegate.swift; path = Views/Status/StatusViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
+		3E23A5C51EF506060011AFB3 /* NetworkingRequestDirectControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestDirectControl.swift; path = RobonectAPI/Networking/NetworkingRequestDirectControl.swift; sourceTree = SOURCE_ROOT; };
 		3E413F741EE7506700D19E16 /* ErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorCode.swift; path = RobonectAPI/Enumerations/ErrorCode.swift; sourceTree = SOURCE_ROOT; };
 		3E548D261EE21D53005132C6 /* Robonect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robonect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E548D291EE21D53005132C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,14 +75,11 @@
 		3E548D461EE2B908005132C6 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusCode.swift; path = RobonectAPI/Enumerations/StatusCode.swift; sourceTree = SOURCE_ROOT; };
 		3E548D481EE2F260005132C6 /* ModeCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModeCode.swift; path = RobonectAPI/Enumerations/ModeCode.swift; sourceTree = SOURCE_ROOT; };
 		3E548D4A1EE2F3C1005132C6 /* TimerStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerStatusCode.swift; path = RobonectAPI/Enumerations/TimerStatusCode.swift; sourceTree = SOURCE_ROOT; };
-		3E548D4F1EE34141005132C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3E548D511EE341E2005132C6 /* NetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequest.swift; path = RobonectAPI/Networking/NetworkingRequest.swift; sourceTree = SOURCE_ROOT; };
 		3E548D531EE34358005132C6 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = RobonectAPI/Networking/Result.swift; sourceTree = SOURCE_ROOT; };
 		3E549B901EF416870023D513 /* NetworkingRequestStartStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestStartStop.swift; path = RobonectAPI/Networking/NetworkingRequestStartStop.swift; sourceTree = SOURCE_ROOT; };
 		3E549B931EF426890023D513 /* ShowMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowMessage.swift; path = Views/Notifications/ShowMessage.swift; sourceTree = "<group>"; };
-		3E549B951EF426AB0023D513 /* RMessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RMessageKit.framework; path = Carthage/Build/iOS/RMessageKit.framework; sourceTree = "<group>"; };
 		3E990C0C1EE6FC4600D6EE7C /* Lawnmower Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Lawnmower Icons.xcassets"; path = "Graphics/Lawnmower Icons.xcassets"; sourceTree = "<group>"; };
-		3E990C0E1EE7072200D6EE7C /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
 		3E990C121EE7087800D6EE7C /* StatusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewCell.swift; path = Views/Status/StatusViewCell.swift; sourceTree = "<group>"; };
 		3E990C141EE708AD00D6EE7C /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewController.swift; path = Views/Status/StatusViewController.swift; sourceTree = "<group>"; };
 		3E990C181EE7183100D6EE7C /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Integer.swift; path = Extensions/Integer.swift; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 		3E990C241EE72BC300D6EE7C /* RobonectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobonectUITests.swift; sourceTree = "<group>"; };
 		3E990C261EE72BC300D6EE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDBBC421EF4675C006D68FF /* NetworkingRequestErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestErrorHandling.swift; path = RobonectAPI/Networking/NetworkingRequestErrorHandling.swift; sourceTree = SOURCE_ROOT; };
+		3EDBBC451EF46AFA006D68FF /* DirectControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DirectControlView.swift; path = "Views/Direct Control/DirectControlView.swift"; sourceTree = "<group>"; };
+		3EDBBC471EF4736D006D68FF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3EE87C591EE404A400605321 /* Mower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mower.swift; path = RobonectAPI/Networking/Mower.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5B1EE4128D00605321 /* RobonectAPIResponseName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobonectAPIResponseName.swift; path = RobonectAPI/Responses/RobonectAPIResponseName.swift; sourceTree = SOURCE_ROOT; };
 		3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingRequestSetMode.swift; path = RobonectAPI/Networking/NetworkingRequestSetMode.swift; sourceTree = SOURCE_ROOT; };
@@ -136,7 +138,6 @@
 		3E548D1D1EE21D53005132C6 = {
 			isa = PBXGroup;
 			children = (
-				3E548D4E1EE34134005132C6 /* Carthages */,
 				3E548D281EE21D53005132C6 /* Robonect */,
 				3E990C231EE72BC300D6EE7C /* RobonectUITests */,
 				3E548D271EE21D53005132C6 /* Products */,
@@ -213,18 +214,9 @@
 				3EE87C5D1EE41C1400605321 /* NetworkingRequestSetMode.swift */,
 				3E549B901EF416870023D513 /* NetworkingRequestStartStop.swift */,
 				3EDBBC421EF4675C006D68FF /* NetworkingRequestErrorHandling.swift */,
+				3E23A5C51EF506060011AFB3 /* NetworkingRequestDirectControl.swift */,
 			);
 			name = Networking;
-			sourceTree = "<group>";
-		};
-		3E548D4E1EE34134005132C6 /* Carthages */ = {
-			isa = PBXGroup;
-			children = (
-				3E548D4F1EE34141005132C6 /* Alamofire.framework */,
-				3E990C0E1EE7072200D6EE7C /* FontAwesome.framework */,
-				3E549B951EF426AB0023D513 /* RMessageKit.framework */,
-			);
-			name = Carthages;
 			sourceTree = "<group>";
 		};
 		3E549B921EF426740023D513 /* Notifications */ = {
@@ -246,6 +238,7 @@
 		3E990C101EE7084D00D6EE7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3EDBBC441EF46ADF006D68FF /* Direct Control */,
 				3E549B921EF426740023D513 /* Notifications */,
 				3E1754611EE853CB009EA2F4 /* Engine Details */,
 				3E17545C1EE847CF009EA2F4 /* Storyboards */,
@@ -283,6 +276,14 @@
 			path = RobonectUITests;
 			sourceTree = "<group>";
 		};
+		3EDBBC441EF46ADF006D68FF /* Direct Control */ = {
+			isa = PBXGroup;
+			children = (
+				3EDBBC451EF46AFA006D68FF /* DirectControlView.swift */,
+			);
+			name = "Direct Control";
+			sourceTree = "<group>";
+		};
 		9BE88A8F6898386F3837297B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +296,7 @@
 		B9E61936295163104354061C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EDBBC471EF4736D006D68FF /* CoreMotion.framework */,
 				F3448A7A5BB90CF8032A33E3 /* Pods_Robonect.framework */,
 			);
 			name = Frameworks;
@@ -462,6 +464,7 @@
 				3EE87C5A1EE404A400605321 /* Mower.swift in Sources */,
 				3E990C1D1EE7291200D6EE7C /* StatusViewControllerTableViewDataSource.swift in Sources */,
 				3E548D4B1EE2F3C1005132C6 /* TimerStatusCode.swift in Sources */,
+				3E23A5C61EF506060011AFB3 /* NetworkingRequestDirectControl.swift in Sources */,
 				3E413F751EE7506700D19E16 /* ErrorCode.swift in Sources */,
 				3E548D471EE2B908005132C6 /* StatusCode.swift in Sources */,
 				3E1754651EE856A2009EA2F4 /* SharedSettings.swift in Sources */,
@@ -484,6 +487,7 @@
 				3EDBBC431EF4675C006D68FF /* NetworkingRequestErrorHandling.swift in Sources */,
 				3E990C131EE7087800D6EE7C /* StatusViewCell.swift in Sources */,
 				3E548D541EE34358005132C6 /* Result.swift in Sources */,
+				3EDBBC461EF46AFA006D68FF /* DirectControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
